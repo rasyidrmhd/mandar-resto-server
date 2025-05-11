@@ -1,0 +1,19 @@
+{
+  "name": "service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx directus start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "schema:snapshot": "npx directus schema snapshot ./schema/$(node -p \"new Date().toISOString().replace(/[-:]/g, '').replace('T', '_').slice(0, 15)\")-schema",
+    "schema:apply": "npx directus schema apply ./schema/20250504_153605-schema.yaml"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "directus": "^11.6.1",
+    "pg": "^8.15.5"
+  }
+}
